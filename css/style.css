@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+
+.headerPart {
+    width: 100%;
+    height: 100px;
+
+    background: #8da900;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+.menu ul {
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 55px;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul li a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #fff;
+
+    font-family: 'Kaushan Script', cursive;
+    font-size: 23px;
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+}
+
+.menu ul li a i {
+    font-size: 22px;
+}
+
+
+.menu ul li a:hover {
+    color: #e5ff9a;
+}
+
+
+.bannerPart {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+
+    background-image: url("../images/sunset-background.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .headerPart {
+        height: auto;
+    }
+
+    .menu ul {
+        min-height: 85px;
+        height: auto;
+
+        gap: 20px;
+        flex-wrap: wrap;
+
+        padding: 20px 0;
+    }
+
+    .menu ul li a {
+        font-size: 16px;
+        gap: 6px;
+    }
+
+    .menu ul li a i {
+        font-size: 15px;
+    }
+
+    .bannerPart {
+        min-height: calc(100vh - 85px);
+    }
+
+}
+
+.menu ul li a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.menu ul li a::before {
+    content: "";
+    position: absolute;
+
+    top: -9px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: transform 0.4s ease;
+}
+
+
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+
+    bottom: -9px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #fff;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+}
+
+.menu ul li a:hover::before,
+.menu ul li a:hover::after {
+    transform: scaleX(1);
+}
