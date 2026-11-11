@@ -23,7 +23,7 @@ a {
     width: 100%;
     height: 100px;
 
-    background: #8da900;
+    background: #00a99b;
 }
 
 .menu {
@@ -58,7 +58,7 @@ a {
     font-size: 23px;
     font-weight: 400;
 
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
 }
 
 .menu ul li a i {
@@ -67,7 +67,7 @@ a {
 
 
 .menu ul li a:hover {
-    color: #e5ff9a;
+    color: #9afff7;
 }
 
 
@@ -75,7 +75,6 @@ a {
     width: 100%;
     min-height: calc(100vh - 100px);
 
-    background-image: url("../images/sunset-background.jpg");
 
     background-repeat: no-repeat;
     background-position: center center;
